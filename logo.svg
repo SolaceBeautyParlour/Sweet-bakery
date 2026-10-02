@@ -1,9 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" role="img" aria-label="Sweet Bakery logo">
-  <rect width="320" height="120" rx="20" fill="#f8f0e2"/>
-  <g fill="none" stroke="#a66a20" stroke-width="3">
-    <path d="M143 29c-6-9 1-17 9-17 5 0 8 3 9 7 1-4 4-7 9-7 8 0 15 8 9 17"/>
-    <path d="M151 29h24l-3 11h-18z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 120" role="img" aria-labelledby="title desc">
+  <title id="title">Healthy Oven Bakery</title><desc id="desc">Healthy Oven Bakery wordmark with an orange oven icon</desc>
+  <g fill="none" stroke="#f45a1f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 43h62v52H22z"/><path d="M30 43V30h46v13"/><path d="M30 56h46"/><rect x="34" y="67" width="38" height="20" rx="3"/>
+    <path d="M45 24c4-11 14-11 18 0"/>
   </g>
-  <text x="160" y="70" text-anchor="middle" font-family="Georgia,serif" font-size="42" font-style="italic" fill="#382417">Sweet</text>
-  <text x="160" y="94" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" letter-spacing="6" fill="#a66a20">BAKERY</text>
+  <circle cx="39" cy="61" r="2.8" fill="#f45a1f"/><circle cx="67" cy="61" r="2.8" fill="#f45a1f"/>
+  <text x="103" y="58" font-family="Georgia,serif" font-size="40" font-weight="700" fill="#2b1710">Healthy</text>
+  <text x="105" y="91" font-family="Arial,sans-serif" font-size="22" letter-spacing="7" font-weight="700" fill="#f45a1f">OVEN</text>
+  <path d="M105 101h142" stroke="#f6a06f" stroke-width="2"/>
+  <text x="257" y="92" font-family="Arial,sans-serif" font-size="12" letter-spacing="2" fill="#765548">BAKERY</text>
 </svg>

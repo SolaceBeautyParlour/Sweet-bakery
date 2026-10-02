@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = ''; // Add digits only later, e.g. 23324XXXXXXX
+const WHATSAPP_NUMBER = '233202642538';
 const form = document.getElementById('orderForm');
 const toast = document.getElementById('toast');
 const year = document.getElementById('year');
@@ -11,27 +11,38 @@ function notify(message){
 }
 
 function waLink(message){
-  return WHATSAPP_NUMBER ? `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}` : null;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
 form.addEventListener('submit', (e)=>{
   e.preventDefault();
   const data = Object.fromEntries(new FormData(form).entries());
-  const message = `Hello Sweet Bakery! 🍰\n\nI'd like to place an order.\nName: ${data.name}\nPhone: ${data.phone}\nOrder: ${data.type}\nPreferred date: ${data.date || 'Flexible'}\nDetails: ${data.details}`;
-  const url = waLink(message);
-  if(url){
-    window.open(url, '_blank');
-    form.reset();
-  } else {
-    notify('Add Sweet Bakery’s WhatsApp number in app.js to activate ordering.');
-  }
+  const message = [
+    'Hello Healthy Oven Bakery! 🍊',
+    '',
+    'I would like to place an order.',
+    '',
+    `Name: ${data.name}`,
+    `Phone / WhatsApp: ${data.phone}`,
+    `Order type: ${data.type}`,
+    `Preferred date: ${data.date || 'Flexible'}`,
+    '',
+    'Order details:',
+    data.details,
+    '',
+    'Sent from the Healthy Oven Bakery website.'
+  ].join('\n');
+  window.open(waLink(message), '_blank', 'noopener');
 });
 
 document.getElementById('whatsappDirect').addEventListener('click',(e)=>{
   e.preventDefault();
-  const url = waLink('Hello Sweet Bakery! I would like to make an enquiry.');
-  if(url) window.open(url,'_blank');
-  else notify('Add Sweet Bakery’s WhatsApp number in app.js to activate this button.');
+  window.open(waLink('Hello Healthy Oven Bakery! I would like to make an enquiry.'), '_blank', 'noopener');
+});
+
+document.getElementById('topWhatsapp').addEventListener('click',(e)=>{
+  e.preventDefault();
+  window.open(waLink('Hello Healthy Oven Bakery! I would like to place an order.'), '_blank', 'noopener');
 });
 
 document.querySelector('.menu').addEventListener('click',()=>{
